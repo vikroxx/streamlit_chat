@@ -6,7 +6,7 @@ import os
 
 
 def make_api_call(query):
-    response = requests.get("https://ey-chat.translatetracks.com/query", params={"query": query})
+    response = requests.get("https://ey-chat.translatetracks.com/query", params={"query": query}, timeout= 240)
     return response.json()["response"], response.json()["images"]
 
 
